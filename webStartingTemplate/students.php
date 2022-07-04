@@ -1,3 +1,14 @@
+<?php
+$server = "localhost";
+$username = "root";
+$password = "";
+$database = "zalego";
+
+$conn = mysqli_connect($server,$username,$password,$database);
+$sqlQuery = mysqli_query($conn, "SELECT *FROM enrollment");
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,9 +76,41 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+								<?php while($fetchrecords = mysqli_fetch_array($sqlQuery)) { ?>
+									<tr>
+										<td><?php echo $fetchrecords['no'] ?></td>
+										<td><?php echo $fetchrecords['fullname'] ?></td>
+										<td><?php echo $fetchrecords['phonenumber'] ?></td>
+										<td><?php echo $fetchrecords['email'] ?></td>
+										<td><?php echo $fetchrecords['gender'] ?></td>
+										<td><?php echo $fetchrecords['course'] ?></td>
+										<td><?php echo $fetchrecords['created_at'] ?></td>
+										<td>
+											<a href="">Edit</a>
+											<a href="">View</a>
+											<a href="">Delete</a>
+										</td>
+									</tr>
+								
+								<?php }?>
+
+                               
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+					
+		</div>
+		
+	</div>
+<script src="jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+<tr>
                                     <td>1.</td>
-                                    <td>Diana Wanjiru</td>
+                                    <td>Diana Mocoh</td>
                                     <td>+254746239540</td>
                                     <td>mocohdiana04@gmail.com</td>
                                     <td>Female</td>
@@ -85,16 +128,3 @@
                                         </a>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-				</div>
-			</div>
-					
-		</div>
-		
-	</div>
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
