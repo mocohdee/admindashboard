@@ -1,12 +1,5 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "web2";
-
-$conn = mysqli_connect($server,$username,$password,$database);
-
-$sqlQuery = mysqli_query($conn, "SELECT *FROM contactus");
+require_once('logics/dbconnection.php');
 $countrecords = mysqli_num_rows($sqlQuery)
 
 //echo $fetchrecords['firstname'];
