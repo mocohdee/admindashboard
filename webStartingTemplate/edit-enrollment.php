@@ -9,7 +9,30 @@ while($fetchUser = mysqli_fetch_array($queryUser))
 	$email =$fetchUser['email'];
 	
 	
-};
+}
+//update user records
+if(isset($_POST['updateRecords']))
+{
+    //Fetch from data
+    $name = $_POST['fullname'];
+    $phonenumber = $_POST['phonenumber'];
+    $emailAddress = $_POST['email'];
+    $formGender = $_POST['gender'];
+    $formcourse = $_POST['course'];
+
+    //update records
+    $updatequery = mysqli_query($conn, 
+    "UPDATE enrollment SET fullname='$name',phonenumber='$phonenumber',email='$emailAddress',gender='$formGender',course='$formcourse'
+    WHERE no='".$_GET['no']."' ");
+
+if($updatequery)
+{
+    echo "Data updated";
+}
+else{
+    echo "Error occured";
+}
+}
 
 
 ?>
@@ -33,7 +56,7 @@ while($fetchUser = mysqli_fetch_array($queryUser))
                         </div>
 						<div class="card-body">
 							<!-- add form here -->
-							<form action="enroll.php" method="POST">
+							<form action="edit-enrollment.php" method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
                             <label for="fullname" class="form-label">Full name</label>
@@ -70,7 +93,7 @@ while($fetchUser = mysqli_fetch_array($queryUser))
                        
                     </div>           
                        
-                 <button type="submit" name="enroll" class="btn btn-outline-primary">Update records</button>
+                 <button type="submit" name="updateRecords" class="btn btn-outline-primary">Update records</button>
             </div>
         </form>
 						</div>
