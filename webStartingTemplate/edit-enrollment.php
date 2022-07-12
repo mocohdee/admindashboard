@@ -1,9 +1,11 @@
 <?php
+$message ="";
 require_once('logics/dbconnection.php');
 $queryUser = mysqli_query($conn,"SELECT * FROM enrollment WHERE no='".$_GET['no']."' ");
 
 while($fetchUser = mysqli_fetch_array($queryUser))
 {
+    $no =$fetchUser['no'];
 	$fullname =$fetchUser['fullname'];
 	$phonenumber =$fetchUser['phonenumber'];
 	$email =$fetchUser['email'];
@@ -27,10 +29,10 @@ if(isset($_POST['updateRecords']))
 
 if($updatequery)
 {
-    echo "Data updated";
+    $message= "Data updated";
 }
 else{
-    echo "Error occured";
+    $message= "Error occured";
 }
 }
 
@@ -53,10 +55,11 @@ else{
                     <div class="card">
                         <div class="card-header bg-dark text-center text-white">
                             <h4>Edit Student:</h4>
+                            <span><?php echo $message ?></span>
                         </div>
 						<div class="card-body">
 							<!-- add form here -->
-							<form action="edit-enrollment.php" method="POST">
+							<form action="edit-enrollment.php?no=<?php echo $no ?>" method="POST">
                     <div class="row">
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
                             <label for="fullname" class="form-label">Full name</label>
