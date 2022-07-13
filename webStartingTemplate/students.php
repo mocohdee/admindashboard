@@ -1,6 +1,6 @@
 <?php
 require_once('logics/dbconnection.php');
-$sqlQuery = mysqli_query($conn, "SELECT *FROM enrollment");
+$sqlQuery = mysqli_query($conn, "SELECT *FROM enrollment ");
 
 
 ?>
@@ -53,8 +53,8 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM enrollment");
 										<td><?php echo $fetchrecords['created_at'] ?></td>
 										<td>
 											<a href="edit-enrollment.php?no=<?php echo $fetchrecords['no']?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-											<a href="" class="btn btn-info btn-sm "><i class="fa fa-eye"></i></a>
-											<a href="" class="btn btn-danger btn-sm "><i class="fa fa-trash"></i></a>
+											<a href="view-enrollment.php?no=<?php echo $fetchrecords['no']?>" class="btn btn-info btn-sm "><i class="fa fa-eye"></i></a>
+											<a href="delete-enrollment.php?no=<?php echo $fetchrecords['no']?>" class="btn btn-danger btn-sm "><i class="fa fa-trash"></i></a>
 										</td>
 									</tr>
 								

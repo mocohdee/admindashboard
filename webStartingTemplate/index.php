@@ -55,7 +55,7 @@ $countAllFemale= mysqli_num_rows($queryAllFemale);
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-folder-open fa-3x"></i></span>
-						<span class="float-right badge badge-dark"><?php echo $countAllFemale?></span>
+						<span class="float-right badge badge-dark"><?php echo $countAllFemale ?></span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
