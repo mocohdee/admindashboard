@@ -9,6 +9,8 @@ while($fetchUser = mysqli_fetch_array($queryUser))
 	$fullname =$fetchUser['fullname'];
 	$phonenumber =$fetchUser['phonenumber'];
 	$email =$fetchUser['email'];
+    $gender =$fetchUser['gender'];
+    $course =$fetchUser['course'];
 	
 	
 }
@@ -78,7 +80,7 @@ else{
                         <div class="mb-3 col-lg-6 col-md-6 col-sm-12">
                             <label for="gender" class="form-label">Gender</label>
                             <select name="gender" class="form-control" aria-label="default select example">
-                                <option >--Select your gender--</option>
+                                <option ><?php echo $gender?></option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
@@ -86,7 +88,7 @@ else{
 						
                         <div class="mb-3 col-lg-6">
                             <select name="course" class="form-control multiplchose_questiontypes" id="selector">
-                                <option value="" >--Select course--</option>
+                                <option value="" ><?php$course?></option>
                                 <option value="web design">web design</option>
                                 <option value="cyber security">cyber security</option>
                                 <option value="android development">android development</option>

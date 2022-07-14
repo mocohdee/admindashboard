@@ -7,6 +7,10 @@ while($fetchStudentsRecords = mysqli_fetch_array($sqlFetchStudent))
     $fullname = $fetchStudentsRecords['fullname'];
     $phone = $fetchStudentsRecords['phonenumber'];
     $email = $fetchStudentsRecords['email'];
+    $gender = $fetchStudentsRecords['gender'];
+    $course = $fetchStudentsRecords['course'];
+    $createdAt = $fetchStudentsRecords['created_at'];
+    
 }
 
 
@@ -49,8 +53,8 @@ while($fetchStudentsRecords = mysqli_fetch_array($sqlFetchStudent))
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">Gender: <span class="float-right badge badge-primary"><?php echo $gender?> </span></li>
-                            <li class="list-group-item">Course: <span class="float-right badge badge-secondary"><?php echo $course?></span></li>
-                            <li class="list-group-item">Enrolled on: <span class="float-right badge badge-danger"><?php echo $phone?></span></li>
+                            <li class="list-group-item">Course: <span class="float-right badge badge-secondary"><?php echo $course?> </span></li>
+                            <li class="list-group-item">Enrolled on: <span class="float-right badge badge-danger"><?php echo $createdAt?></span></li>
                         </ul>
 
                     </div>
