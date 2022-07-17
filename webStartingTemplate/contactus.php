@@ -56,14 +56,8 @@ require_once('logics/dbconnection.php');
 	
                 
                 
-            </form>
-        </div>
-    
-
-    
-    </div>
-
-	</div>
+            
+       
 
 
 	
