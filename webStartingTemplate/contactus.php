@@ -58,6 +58,7 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
 										</td>
 									</tr>
 								
+<<<<<<< HEAD
 								<?php }?>
 
                                
@@ -70,6 +71,18 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
 		</div>
 		
 	</div>
+=======
+	
+                    </div>
+                </div>
+				
+    
+	
+                
+                
+            
+       
+>>>>>>> 7185db320fa0908278702e0ed3df27ebd9c30cea
 
 
 	<?php require_once('includes/scripts.php') ?>
