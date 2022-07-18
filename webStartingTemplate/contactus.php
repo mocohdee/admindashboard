@@ -38,6 +38,7 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
                                     <th>email</th>
                                     <th>message</th>
                                     <th>created_at</th>
+                                    <th>Actions</th>
                                     
                                 </tr>
                             </thead>
@@ -58,7 +59,7 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
 										</td>
 									</tr>
 								
-<<<<<<< HEAD
+
 								<?php }?>
 
                                
@@ -67,14 +68,8 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
                     </div>
 				</div>
 			</div>
-					
 		</div>
-		
-	</div>
-=======
-	
-                    </div>
-                </div>
+     
 				
     
 	
@@ -82,7 +77,7 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM contactus ");
                 
             
        
->>>>>>> 7185db320fa0908278702e0ed3df27ebd9c30cea
+
 
 
 	<?php require_once('includes/scripts.php') ?>
