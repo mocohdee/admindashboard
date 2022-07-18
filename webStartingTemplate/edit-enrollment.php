@@ -1,7 +1,7 @@
 <?php
 $message ="";
 require_once('logics/dbconnection.php');
-$queryUser = mysqli_query($conn,"SELECT * FROM enrollment WHERE no='".$_GET['no']."' ");
+$queryUser =mysqli_query($conn, "SELECT * FROM enrollment WHERE no='".$_GET['no']."' ");
 
 while($fetchUser = mysqli_fetch_array($queryUser))
 {

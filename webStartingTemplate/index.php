@@ -83,6 +83,11 @@ $countAllFemale= mysqli_num_rows($queryAllFemale);
 					<div class="card-header bg-dark text-white text-center">
 						<span>Students Analysis</span>
 					</div>
+					<div class="card-body">
+						<span><i class="fa fa-line-chart fa-3x"></i></span>
+						<span class="float-right">00</span>
+					</div>
+					
 				</div>
 			</div>
 		</div>
