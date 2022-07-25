@@ -26,6 +26,7 @@ $sqlQuery = mysqli_query($conn, "SELECT *FROM enrollment ");
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>Students</span>
+						<button href="" class="float-right btn btn-primary btn-sm">Add Student</button>
 					</div>
                     <div class="card-body">
                         <table class="table table-striped table-hover table-responsive" style="font-size: 12px;">
