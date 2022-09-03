@@ -88,6 +88,7 @@ $countAllFemale= mysqli_num_rows($queryAllFemale);
 						<span class="float-right">00</span>
 					</div>
 					
+					
 				</div>
 			</div>
 		</div>
